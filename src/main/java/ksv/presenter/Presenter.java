@@ -1,11 +1,12 @@
-package ksv.Presenter;
+package ksv.presenter;
 
-import ksv.Model.Animal;
-import ksv.Model.Registry;
-import ksv.View.View;
+import ksv.model.Animal;
+import ksv.model.Registry;
+import ksv.model.animals.DomesticAnimal;
+import ksv.model.animals.PackAnimal;
+import ksv.view.Messages;
+import ksv.view.View;
 
-import java.io.PrintStream;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,8 +19,15 @@ public class Presenter {
         this.registry = registry;
     }
 
-    public void start()  {
+    public void start() {
         int choice;
+        boolean flag = registry.loadZooFromFile(Messages.getMessage(ZOO_FILENAME));
+        if (flag) {
+            view.showMessage(Messages.getMessage("ZOO_LOADED"),Messages.getMessage(ZOO_FILENAME));
+        } else {
+            view.showMessage(Messages.getMessage("ZOO_NOT_LOADED"),Messages.getMessage(ZOO_FILENAME));
+        }
+
 
 
         while (true) {
@@ -43,6 +51,12 @@ public class Presenter {
                     processShowAllAnimals();
                     break;
                 case 6:
+                    flag = registry.saveZooToFile(Messages.getMessage(ZOO_FILENAME));
+                    if (flag) {
+                        view.showMessage(Messages.getMessage("ZOO_SAVED"),Messages.getMessage(ZOO_FILENAME));
+                    } else {
+                        view.showMessage(Messages.getMessage("ZOO_NOT_SAVED"),Messages.getMessage(ZOO_FILENAME));
+                    }
                     return;
                 default:
                     view.showInvalidChoice();
@@ -52,12 +66,13 @@ public class Presenter {
     }
 
     private void processAddAnimal() {
-        // Логика добавления нового животного в реестр
-        String name = view.getInput("ADD_ANIMAL_PROMPT");
+        String name = view.getInput(ADD_ANIMAL_PROMPT);
+
         String birthDate = view.getInput("ADD_BIRTH_DATE_PROMPT");
         boolean isDomestic = Boolean.parseBoolean(view.getInput("ADD_DOMESTIC_PROMPT"));
-        String[] commands = processCommandInput();
-        registry.addAnimal(new Animal(name, birthDate, commands, isDomestic));
+        List<String> commands = processCommandInput();
+        String kind = view.getInput("ADD_KIND_PROMPT");
+        registry.addAnimal(isDomestic ? new DomesticAnimal(name, birthDate, commands, kind) : new PackAnimal(name, birthDate, commands, kind));
         view.showMessage("ANIMAL_ADDED");
     }
 
@@ -70,7 +85,7 @@ public class Presenter {
 
     private void processShowAnimalDetails() {
         // Логика отображения деталей о животном
-        String name = view.getInput("ADD_ANIMAL_PROMPT");
+        String name = view.getInput(ADD_ANIMAL_PROMPT);
         Animal animal = registry.findAnimal(name);
         if (animal != null) {
             view.showMessage(animal.toString());
@@ -81,10 +96,10 @@ public class Presenter {
 
     private void processTrainAnimal() {
         // Логика обучения животного
-        String name = view.getInput("ADD_ANIMAL_PROMPT");
+        String name = view.getInput(ADD_ANIMAL_PROMPT);
         Animal animal = registry.findAnimal(name);
         if (animal != null) {
-            String[] newCommands = processCommandInput();
+            List<String> newCommands = processCommandInput();
             animal.setCommands(newCommands);
             view.showMessage("TRAINING_SUCCESSFUL", name, String.join(", ", newCommands));
         } else {
@@ -98,14 +113,15 @@ public class Presenter {
     }
 
 
-    private String[] processCommandInput() {
-        // Логика ввода команд
-        // Введите команды (введите 'done', чтобы закончить):
+    private List<String> processCommandInput() {
         List<String> commands = new ArrayList<>();
         String input;
         while (!(input = view.getInput("NEW_COMMANDS_PROMPT")).equalsIgnoreCase("done")) {
             commands.add(input);
         }
-        return commands.toArray(new String[0]);
+        return commands;
     }
+
+    private static final String ADD_ANIMAL_PROMPT = "ADD_ANIMAL_PROMPT";
+    private static final String ZOO_FILENAME = "ZOO_FILENAME";
 }

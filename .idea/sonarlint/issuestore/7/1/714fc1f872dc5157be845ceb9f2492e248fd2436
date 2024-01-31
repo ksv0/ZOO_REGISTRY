@@ -1,2 +1,10 @@
 
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(û‚îİúÿÿÿÿ8«º–óÕ1
+K
+java:S1948")Make "animals" transient or serializable.(²û†íüÿÿÿÿ8ã¸ˆ‹Ö1
+^
+java:S2118"AMake the "java.util.List" class "Serializable" or don't write it.(¤±¯8òÜŠÖ1
+L	java:S106"+Replace this use of System.out by a logger.(Õ›Š×úÿÿÿÿ8»¾ÜŠÖ1
+L	java:S106!"+Replace this use of System.out by a logger.(‚ÕÒ€ùÿÿÿÿ8¼¾ÜŠÖ1
+F	java:S106)"+Replace this use of System.out by a logger.(ÿáƒx8¾¾ÜŠÖ1
+F	java:S106+"+Replace this use of System.out by a logger.(¨üs8¿¾ÜŠÖ1

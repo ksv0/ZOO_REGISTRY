@@ -1,8 +1,4 @@
 
 o
-java:S11928"RDefine a constant instead of duplicating this literal "ADD_ANIMAL_PROMPT" 3 times.(ÓèÒü8ÛµóõÕ1
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëïÀıûÿÿÿÿ8İµóõÕ1
-M
-java:S1128"0Remove this unused import 'java.io.PrintStream'.(×ê’8¡ÇôõÕ1
-^
-java:S1128"ARemove this unused import 'java.io.UnsupportedEncodingException'.(Ãµ…“8¡ÇôõÕ1
+java:S11928"RDefine a constant instead of duplicating this literal "ADD_ANIMAL_PROMPT" 3 times.(ÓèÒü8ĞƒÿŠÖ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëïÀıûÿÿÿÿ8ÑƒÿŠÖ1

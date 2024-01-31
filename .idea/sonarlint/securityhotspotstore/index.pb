@@ -19,3 +19,23 @@ T
 $src/main/java/ksv/View/Messages.java,4\b\4bf5694cad67f17e676b1d8ab1f3003fcef8f643
 Z
 *src/main/java/ksv/View/Messages.properties,3\5\35c096a34000f450cc335397a0c3b0aadd4e0538
+`
+0src/main/java/ksv/View/Messages_ru_RU.properties,6\8\684f0be888f7b68fc9c42c23cd689e2b0bb16e7f
+S
+#src/main/java/ksv/model/Animal.java,3\0\3079e42502d20628484a3223642d9ad24ea63377
+U
+%src/main/java/ksv/model/Registry.java,5\d\5d7b451ae5380f3719ac398201d386537ec7d00c
+Z
+*src/main/java/ksv/presenter/Presenter.java,4\9\4995868b87e966ea235f4d96a1451ff85123fe50
+T
+$src/main/java/ksv/view/Language.java,b\3\b3b843013fbcedd346eb8ea48ee5d22cf264b98e
+P
+ src/main/java/ksv/view/View.java,4\e\4ec5caefb1647170a627af5d0f541faa914c2e1d
+T
+$src/main/java/ksv/view/Messages.java,3\a\3a900357a6dc5fb508c57997937bd6a062d70a7b
+c
+3src/main/java/ksv/model/animals/DomesticAnimal.java,0\5\056ddae88b9232f6aa1f3100fe1d7892c988ac78
+_
+/src/main/java/ksv/model/animals/PackAnimal.java,c\3\c31cce5ab0ddab7f239ec2e1e43383c707469548
+Y
+)src/main/java/ksv/view/LocaleManager.java,2\e\2ef8c8a4eba4341b403cf379d14a9ff0b3e9db7b

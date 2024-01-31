@@ -1,8 +1,8 @@
 package ksv;
 
-import ksv.Model.Registry;
-import ksv.Presenter.Presenter;
-import ksv.View.View;
+import ksv.model.Registry;
+import ksv.presenter.Presenter;
+import ksv.view.View;
 
 public class Main {
     public static void main(String[] args) {

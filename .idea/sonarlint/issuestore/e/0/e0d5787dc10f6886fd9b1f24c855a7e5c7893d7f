@@ -1,4 +1,6 @@
 
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(û‚îİúÿÿÿÿ8“–óÕ1
-O
-java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8àë×óÕ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(û‚îİúÿÿÿÿ8ëŒè‹Ö1
+V
+java:S5993"9Change the visibility of this constructor to "protected".(ÏŒÛŠ8ôŒè‹Ö1
+G
+java:S1948"%Make "commands" private or transient.(¦¸Èœúÿÿÿÿ8õŒè‹Ö1

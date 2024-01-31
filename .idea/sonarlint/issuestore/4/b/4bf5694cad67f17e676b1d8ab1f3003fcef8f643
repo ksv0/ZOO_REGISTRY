@@ -1,6 +1,6 @@
 
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(˜…áÏøÿÿÿÿ8Æï¸õÕ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(˜…áÏøÿÿÿÿ8”ÅÎ‰Ö1
 \
-java:S1118":Add a private constructor to hide the implicit public one.(Ñ×´»øÿÿÿÿ8Ëï¸õÕ1
+java:S1118":Add a private constructor to hide the implicit public one.(Ñ×´»øÿÿÿÿ8ŸÅÎ‰Ö1
 Z
-java:S1128"=Remove this unused import 'java.util.PropertyResourceBundle'.(ä÷¶¾8ì°ÉõÕ1
+java:S1128"=Remove this unused import 'java.util.PropertyResourceBundle'.(ä÷¶¾8¤ÅÎ‰Ö1

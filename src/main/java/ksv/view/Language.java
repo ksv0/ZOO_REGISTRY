@@ -1,9 +1,9 @@
-package ksv.View;
+package ksv.view;
 
 import java.util.Locale;
 
 public enum Language {
-    ENGLISH(Locale.ENGLISH),
+    ENGLISH(new Locale("en", "EN")),
     RUSSIAN(new Locale("ru", "RU"));
 
     private final Locale locale;

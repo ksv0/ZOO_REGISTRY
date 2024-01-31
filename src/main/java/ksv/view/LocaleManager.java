@@ -1,4 +1,4 @@
-package ksv.View;
+package ksv.view;
 import java.text.MessageFormat;
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -6,6 +6,9 @@ import java.util.ResourceBundle;
 class LocaleManager {
     private static Locale currentLocale = Locale.getDefault();
     private static ResourceBundle messagesBundle = ResourceBundle.getBundle("Messages", currentLocale);
+
+    private LocaleManager() {
+    }
 
     public static void setLocale(Locale locale) {
         currentLocale = locale;
