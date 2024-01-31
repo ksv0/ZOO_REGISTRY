@@ -1,0 +1,21 @@
+
+K
+src/main/java/ksv/Main.java,3\f\3f56c8284200b5159f2964cbc21f2990e08e4d1b
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+Z
+*src/main/java/ksv/Presenter/Presenter.java,1\6\163863ddedee95722a9669e6bee058c5417aa95f
+P
+ src/main/java/ksv/View/View.java,0\c\0c1bf02e62d5479d114d8aa9688612e8ce7d5d9d
+S
+#src/main/java/ksv/Model/Animal.java,e\0\e0d5787dc10f6886fd9b1f24c855a7e5c7893d7f
+U
+%src/main/java/ksv/Model/Registry.java,7\1\714fc1f872dc5157be845ceb9f2492e248fd2436
+Y
+)src/main/java/ksv/View/LocaleManager.java,5\1\51eceea667bf1dcaa02125cfc4ccacde11392f5b
+T
+$src/main/java/ksv/View/Language.java,1\2\1290d59698f80bfa48c5079b2c85a6dd3e3c5241
+T
+$src/main/java/ksv/View/Messages.java,4\b\4bf5694cad67f17e676b1d8ab1f3003fcef8f643
+Z
+*src/main/java/ksv/View/Messages.properties,3\5\35c096a34000f450cc335397a0c3b0aadd4e0538
