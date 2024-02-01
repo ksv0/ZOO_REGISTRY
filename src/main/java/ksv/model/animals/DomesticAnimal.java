@@ -16,6 +16,6 @@ public class DomesticAnimal extends Animal implements Serializable {
 
     @Override
     public String toString() {
-        return super.toString() + " " + MessageFormat.format(Messages.getMessage("TO_STRING_DOMESTIC_ANIMAL"), kind);
+        return MessageFormat.format(Messages.getMessage("TO_STRING_DOMESTIC_ANIMAL"), kind)+super.toString();
     }
 }

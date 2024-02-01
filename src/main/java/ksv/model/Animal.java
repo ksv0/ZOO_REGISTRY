@@ -6,6 +6,7 @@ import java.io.Serializable;
 import java.text.MessageFormat;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
 import java.util.List;
@@ -18,7 +19,8 @@ public abstract class Animal implements Serializable {
     protected Animal(String name, String birthDate, List<String> commands) {
         this.name = name;
         try {
-            this.birthDate = LocalDate.parse(birthDate);
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+            this.birthDate = LocalDate.parse(birthDate,formatter);
         } catch (DateTimeParseException e) {
             this.birthDate = LocalDate.now();
         }
@@ -29,8 +31,9 @@ public abstract class Animal implements Serializable {
 
     @Override
     public String toString() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         return MessageFormat.format(Messages.getMessage("TO_STRING_ANIMAL_WITH_COMMANDS"),
-                name, birthDate, calculateAge(), commands);
+                name,formatter.format(birthDate), calculateAge(), commands);
     }
 
     protected int calculateAge() {

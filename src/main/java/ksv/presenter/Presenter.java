@@ -21,13 +21,13 @@ public class Presenter {
 
     public void start() {
         int choice;
-        boolean flag = registry.loadZooFromFile(Messages.getMessage(ZOO_FILENAME));
+        String fileName = Messages.getMessage(ZOO_FILENAME);
+        boolean flag = registry.loadZooFromFile(fileName);
         if (flag) {
-            view.showMessage(Messages.getMessage("ZOO_LOADED"),Messages.getMessage(ZOO_FILENAME));
+            view.showMessage("ZOO_LOADED", fileName);
         } else {
-            view.showMessage(Messages.getMessage("ZOO_NOT_LOADED"),Messages.getMessage(ZOO_FILENAME));
+            view.showMessage("ZOO_NOT_LOADED", fileName);
         }
-
 
 
         while (true) {
@@ -53,9 +53,9 @@ public class Presenter {
                 case 6:
                     flag = registry.saveZooToFile(Messages.getMessage(ZOO_FILENAME));
                     if (flag) {
-                        view.showMessage(Messages.getMessage("ZOO_SAVED"),Messages.getMessage(ZOO_FILENAME));
+                        view.showMessage("ZOO_SAVED", fileName);
                     } else {
-                        view.showMessage(Messages.getMessage("ZOO_NOT_SAVED"),Messages.getMessage(ZOO_FILENAME));
+                        view.showMessage("ZOO_NOT_SAVED", fileName);
                     }
                     return;
                 default:
@@ -67,9 +67,15 @@ public class Presenter {
 
     private void processAddAnimal() {
         String name = view.getInput(ADD_ANIMAL_PROMPT);
-
         String birthDate = view.getInput("ADD_BIRTH_DATE_PROMPT");
-        boolean isDomestic = Boolean.parseBoolean(view.getInput("ADD_DOMESTIC_PROMPT"));
+        view.showMessage("ADD_DOMESTIC_PROMPT");
+        boolean isDomestic;
+        int choice = view.getUserChoice();
+        if (choice == 1) {
+            isDomestic = true;
+        } else {
+            isDomestic = false;
+        }
         List<String> commands = processCommandInput();
         String kind = view.getInput("ADD_KIND_PROMPT");
         registry.addAnimal(isDomestic ? new DomesticAnimal(name, birthDate, commands, kind) : new PackAnimal(name, birthDate, commands, kind));
@@ -77,25 +83,22 @@ public class Presenter {
     }
 
     private void processRemoveAnimal() {
-        // Логика удаления животного из реестра
         String name = view.getInput("REMOVE_ANIMAL_PROMPT");
         registry.removeAnimal(name);
         view.showMessage("ANIMAL_REMOVED");
     }
 
     private void processShowAnimalDetails() {
-        // Логика отображения деталей о животном
         String name = view.getInput(ADD_ANIMAL_PROMPT);
         Animal animal = registry.findAnimal(name);
         if (animal != null) {
-            view.showMessage(animal.toString());
+            view.println(animal.toString());
         } else {
             view.showMessage("ANIMAL_NOT_FOUND", name);
         }
     }
 
     private void processTrainAnimal() {
-        // Логика обучения животного
         String name = view.getInput(ADD_ANIMAL_PROMPT);
         Animal animal = registry.findAnimal(name);
         if (animal != null) {

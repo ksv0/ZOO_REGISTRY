@@ -17,10 +17,6 @@ T
 $src/main/java/ksv/View/Language.java,1\2\1290d59698f80bfa48c5079b2c85a6dd3e3c5241
 T
 $src/main/java/ksv/View/Messages.java,4\b\4bf5694cad67f17e676b1d8ab1f3003fcef8f643
-Z
-*src/main/java/ksv/View/Messages.properties,3\5\35c096a34000f450cc335397a0c3b0aadd4e0538
-`
-0src/main/java/ksv/View/Messages_ru_RU.properties,6\8\684f0be888f7b68fc9c42c23cd689e2b0bb16e7f
 S
 #src/main/java/ksv/model/Animal.java,3\0\3079e42502d20628484a3223642d9ad24ea63377
 U
